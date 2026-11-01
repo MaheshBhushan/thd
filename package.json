@@ -1,0 +1,34 @@
+{
+  "name": "thd",
+  "version": "0.1.0",
+  "private": true,
+  "description": "THD webmail + iLearn from one command line",
+  "type": "module",
+  "bin": {
+    "thd": "./src/cli.ts"
+  },
+  "scripts": {
+    "thd": "bun run src/cli.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run typecheck && bun test",
+    "build:local": "bun build --compile src/cli.ts --outfile dist/thd"
+  },
+  "dependencies": {
+    "html-to-text": "^10.0.1",
+    "linkedom": "^0.18.15",
+    "mailparser": "^3.14.1",
+    "puppeteer-core": "^25.16.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/html-to-text": "^9.0.4",
+    "@types/mailparser": "^3.9.0",
+    "typescript": "^7.0.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaheshBhushan/thd.git"
+  }
+}
